@@ -33,7 +33,7 @@ void listen(std::function<void(TCallbackType*)>&& callback)
         std::move(*reinterpret_cast<std::function<void(void*)>*>(&callback));
 }
 
-void remove_listener(int callback_id) { s_callbacks_for_callbacks.erase(callback_id); }
+void remove_listener(int callback_id);
 
 template<typename TCallbackType>
 void remove_listener()

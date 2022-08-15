@@ -54,4 +54,6 @@ void update()
         SteamAPI_ManualDispatch_FreeLastCallback(SteamAPI_GetHSteamPipe());
     }
 }
+
+void remove_listener(int callback_id) { s_callbacks_for_callbacks.erase(callback_id); }
 }
